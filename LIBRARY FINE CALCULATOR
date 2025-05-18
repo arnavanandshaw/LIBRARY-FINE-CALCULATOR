@@ -1,0 +1,75 @@
+import java.util.*;
+public class library
+{
+    int n;int CLASS;int ADMINNUMBER; double FINE ;String NAME;String took;
+Scanner sc=new Scanner(System.in);
+void accept(){
+
+//ENTER THE STUDENT'S DETAIL TO CALCULATE HIS FINE
+System.out.println("Enter your name");
+NAME=sc.nextLine();
+System.out.println("Enter your admin no.");
+ADMINNUMBER=sc.nextInt();
+System.out.println("Enter your Class");
+CLASS=sc.nextInt();  
+System.out.println("ENTER THE NUMBER OF DAYS FROM WHEN THE BOOK,ARTICLE OR MAGAZINE  IS WITH YOU");
+ n=sc.nextInt();
+}
+void calculate(){
+    // Here 14 means 2 weeks , as the fine is calculated after 2 weeks , if book not returned within 2 weeks.
+    n=n-14;
+}
+void check(){
+    if(n<=14){
+        System.out.println("NAME:"+NAME);
+        System.out.println("CLASS:"+CLASS);
+        System.out.println("ADMISSION NUMBER:"+ADMINNUMBER);
+        System.out.println("DAYS FOR CALCULATING FINE OF BORROWING THE BOOK,ARTICLE OR MAGAZINE TILL NOW :"+n);
+        System.out.println("THERE IS NO. FINE FOR YOU");
+    }
+    else if(n<=21){
+        FINE=n*10.0+150;
+        System.out.println("NAME:"+NAME);
+        System.out.println("CLASS:"+CLASS);
+        System.out.println("ADMISSION NUMBER:"+ADMINNUMBER);
+        System.out.println("DAYS FOR CALCULATING FINE OF BORROWING THE BOOK,ARTICLE OR MAGAZINE TILL NOW :"+n);
+        System.out.println("THERE IS A FINE OF " +FINE+ "  RUPEES !");
+        System.out.println("PLEASE PAY YOUR  FINE OF " +FINE+ "  RUPEES AS SOON AS POSSIBLE");
+    }
+    else if(n<=28){
+        FINE=n*15.0+150;
+        System.out.println("NAME:"+NAME);
+        System.out.println("CLASS:"+CLASS);
+        System.out.println("ADMISSION NUMBER:"+ADMINNUMBER);
+        System.out.println("DAYS FOR CALCULATING FINE OF BORROWING THE BOOK,ARTICLE OR MAGAZINE TILL NOW :"+n);
+        System.out.println("THERE IS A FINE OF " +FINE+ "  RUPEES !");
+        System.out.println("PLEASE PAY YOUR  FINE OF " +FINE+ "  RUPEES AS SOON AS POSSIBLE");
+    }
+    else if(n<=35){
+        FINE=n*30.0+150;
+        System.out.println("NAME:"+NAME);
+        System.out.println("CLASS:"+CLASS);
+        System.out.println("ADMISSION NUMBER:"+ADMINNUMBER);
+        System.out.println("DAYS FOR CALCULATING FINE OF BORROWING THE BOOK,ARTICLE OR MAGAZINE  TILL NOW :"+n);
+        System.out.println("THERE IS A FINE OF " +FINE+ "  RUPEES !");
+        System.out.println("PLEASE PAY YOUR  FINE OF " +FINE+ "  RUPEES AS SOON AS POSSIBLE");
+        System.out.println("PLEASE COME IN OUR LIBRARY OR WE'LL HAVE TO TAKE SEVERE ACTIONS AGAINST YOU");
+
+}
+else {
+        FINE=n*30.0+150;
+        System.out.println("NAME:"+NAME);
+        System.out.println("CLASS:"+CLASS);
+        System.out.println("ADMISSION NUMBER:"+ADMINNUMBER);
+        System.out.println("DAYS FOR CALCULATING FINE OF BORROWING THE BOOK,ARTICLE OR MAGAZINE  TILL NOW :"+n);
+        System.out.println("THERE IS A FINE OF " +FINE+  "  RUPEES !");
+        System.out.println("PLEASE PAY YOUR  FINE AND VISIT THE SCHOOL PRINCIPAL TOMMOROW !! ");
+}
+}
+public static void main(String args[]){
+    library obj=new library();
+    obj.accept();
+    obj.calculate();
+    obj.check();
+}
+}
